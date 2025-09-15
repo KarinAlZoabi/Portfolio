@@ -20,9 +20,13 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 1 }}
-        className="mt-4 text-lg md:text-xl opacity-80"
+        className="mt-4 text-xl md:text-2xl font-semibold opacity-90"
       >
-        blah • blah • blah • blah
+        Software Developer
+        <br />
+        <span className="text-sm md:text-base opacity-70 font-normal">
+          Bringing ideas to life, one line of code at a time
+        </span>
       </motion.p>
 
       <motion.button
