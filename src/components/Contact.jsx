@@ -12,10 +12,10 @@ export default function Contact() {
       <div className="space-y-3 text-center text-gray-600 dark:text-gray-300">
         <p>Email me at:</p>
         <a
-          href="mailto:karin@example.com"
+          href="mailto:karinalzoabi15@gmail.com"
           className="text-lg font-medium hover:text-primary transition-colors"
         >
-          karin@example.com
+          karinalzoabi15@gmail.com
         </a>
         <p>Or find me on:</p>
       </div>

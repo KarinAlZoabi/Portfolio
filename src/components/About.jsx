@@ -30,8 +30,7 @@ export default function About() {
             className="space-y-6"
           >
             <p className="leading-relaxed text-lg opacity-90">
-              I’m <span className="font-semibold">Karin Al Zoabi</span>, a calm
-              and elegant person who enjoys exploring knowledge and creating
+              I’m <span className="font-semibold">Karin Al Zoabi</span>, a calm but ambitious person who enjoys exploring knowledge and creating
               meaningful things. I’m naturally reserved and thoughtful, yet
               deeply curious about the world.
             </p>
@@ -75,10 +74,10 @@ export default function About() {
             {[
               "Creative",
               "Research-Oriented",
-              "Calm",
+              "Ambitious",
               "Detail-Focused",
               "Curious",
-              "Elegant",
+              "Determined",
             ].map((trait, index) => (
               <div
                 key={index}

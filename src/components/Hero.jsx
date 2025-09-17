@@ -33,6 +33,11 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
+        onClick={() => {
+          document.getElementById("projects")?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }}
         className="mt-6 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-transform"
       >
         Explore Portfolio
