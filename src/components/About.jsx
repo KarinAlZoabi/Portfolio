@@ -89,6 +89,50 @@ export default function About() {
             ))}
           </motion.div>
         </div>
+        
+
+        <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  viewport={{ once: true }}
+  className="mt-12 space-y-8"
+>
+  {/* Languages & Frameworks */}
+  <div>
+    <h4 className="text-xl font-semibold mb-4">Languages & Frameworks</h4>
+    <div className="flex flex-wrap gap-3">
+      {["React", "AngularJS", "ASP.NET MVC", "C#", "SQL", "JavaScript", "Python", "React Native", "C++", "PHP", "Firebase"].map((skill, i) => (
+        <span
+          key={i}
+          className="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700
+                     text-gray-800 dark:text-gray-200 hover:bg-primary hover:text-white transition"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
+  </div>
+
+  {/* Tools & Platforms */}
+  <div>
+    <h4 className="text-xl font-semibold mb-4">Tools & Platforms</h4>
+    <div className="flex flex-wrap gap-3">
+      {["VS Code", "Visual Studio", "Ubuntu", "SQL Server", "PhpMyAdmin", "Git/GitHub", "Figma"].map((tool, i) => (
+        <span
+          key={i}
+          className="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700
+                     text-gray-800 dark:text-gray-200 hover:bg-primary hover:text-white transition"
+        >
+          {tool}
+        </span>
+      ))}
+    </div>
+  </div>
+</motion.div>
+
+
+
       </div>
     </section>
   );

@@ -81,9 +81,92 @@
 
 //no images
 
+// // src/components/Projects.jsx
+// import { motion } from "framer-motion";
+
+// const projects = [
+//   {
+//     title: "Project One",
+//     description: "A short description of your project goes here.",
+//     image: "https://via.placeholder.com/600x400", // Replace with your screenshot
+//     link: "#",
+//   },
+//   {
+//     title: "Project Two",
+//     description: "Another project description placeholder.",
+//     image: "https://via.placeholder.com/600x400",
+//     link: "#",
+//   },
+//   {
+//     title: "Project Three",
+//     description: "Yet another cool project you worked on.",
+//     image: "https://via.placeholder.com/600x400",
+//     link: "#",
+//   },
+// ];
+
+// export default function Projects() {
+//   return (
+//     <section
+//       id="projects"
+//       className="py-20 px-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+//     >
+//       <div className="max-w-6xl mx-auto text-center">
+//         {/* Section Title */}
+//         <motion.h2
+//           initial={{ opacity: 0, y: -20 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6 }}
+//           className="text-4xl font-bold mb-12"
+//         >
+//           Projects
+//         </motion.h2>
+
+//         {/* Projects Grid */}
+//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+//           {projects.map((project, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, y: 30 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: index * 0.2, duration: 0.6 }}
+//               className="rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-md hover:shadow-xl transition"
+//             >
+//               {/* Project Image */}
+//               <img
+//                 src={project.image}
+//                 alt={project.title}
+//                 className="w-full h-48 object-cover"
+//               />
+
+//               {/* Content */}
+//               <div className="p-6 text-left">
+//                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 mb-4">
+//                   {project.description}
+//                 </p>
+//                 <a
+//                   href={project.link}
+//                   className="text-primary font-medium hover:underline"
+//                 >
+//                   View Project →
+//                 </a>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+//no images
 // src/components/Projects.jsx
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Github, ExternalLink, ArrowLeft, ArrowRight } from "lucide-react";
 
 const projects = [
   {
@@ -99,18 +182,18 @@ const projects = [
       "Machine Learning",
     ],
     github: "https://github.com/danad1821/FYP",
-    demo: "https://studentsrhuedu-my.sharepoint.com/personal/alzoabikm_students_rhu_edu_lb/_layouts/15/stream.aspx?id=%2Fpersonal%2Falzoabikm%5Fstudents%5Frhu%5Fedu%5Flb%2FDocuments%2FFYP%20DEMO%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1",
+    demo: "https://studentsrhuedu-my.sharepoint.com/personal/alzoabikm_students_rhu_edu_lb/_layouts/15/stream.aspx?id=%2Fpersonal%2Falzoabikm%5Fstudents%5Frhu%5Fedu%5Flb%2FDocuments%2FFYP%20DEMO%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUFvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1",
     images: [
       "Images/homePic.jpg",
       "Images/DiagnosisPic.jpg",
       "Images/ArticlesPic.jpg",
       "Images/ColorThemes.jpg",
-      "Images/HomePink.jpg"
+      "Images/HomePink.jpg",
     ],
     link: "#",
-    date: "2025-08",
+    date: "2025-04",
   },
-  {
+   {
     title: "Project Two",
     description:
       "Another project description placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -119,7 +202,7 @@ const projects = [
     demo: "#",
     images: [],
     link: "#",
-    date: "2025-06",
+    date: "2025-02",
   },
   {
     title: "Project Three",
@@ -149,9 +232,19 @@ const sortedProjects = [...projects].sort(
 );
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 3;
+
+  // Image preloading
+  useEffect(() => {
+    sortedProjects.forEach((project) => {
+      project.images.forEach((imageSrc) => {
+        const img = new Image();
+        img.src = imageSrc;
+      });
+    });
+  }, []);
 
   // Pagination calculations
   const totalPages = Math.ceil(sortedProjects.length / projectsPerPage);
@@ -159,14 +252,33 @@ export default function Projects() {
   const indexOfFirst = indexOfLast - projectsPerPage;
   const currentProjects = sortedProjects.slice(indexOfFirst, indexOfLast);
 
-  // Prevent background scroll when modal is open
+  // Keyboard navigation and modal scroll lock
   useEffect(() => {
-    if (selectedProject) {
+    const handleKey = (e) => {
+      if (selectedProjectIndex !== null) {
+        if (e.key === "Escape") {
+          setSelectedProjectIndex(null);
+        } else if (e.key === "ArrowRight") {
+          setSelectedProjectIndex((prev) => (prev + 1) % sortedProjects.length);
+        } else if (e.key === "ArrowLeft") {
+          setSelectedProjectIndex(
+            (prev) => (prev - 1 + sortedProjects.length) % sortedProjects.length
+          );
+        }
+      }
+    };
+
+    if (selectedProjectIndex !== null) {
       document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKey);
     } else {
       document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKey);
     }
-  }, [selectedProject]);
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [selectedProjectIndex, sortedProjects.length]);
 
   return (
     <section
@@ -187,31 +299,50 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {currentProjects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-              // Add flexbox classes here
-              className="p-6 rounded-xl bg-gray-100 dark:bg-gray-800 shadow-md hover:shadow-xl transition flex flex-col"
-              onClick={() => setSelectedProject(project)}
-            >
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {project.description.length > 90
-                  ? project.description.slice(0, 90) + "..."
-                  : project.description}
-              </p>
-              <a
-                // Add mt-auto to push the link to the bottom
-                className="text-primary font-medium hover:underline mt-auto"
+          {currentProjects.map((project, index) => {
+            const globalIndex = sortedProjects.indexOf(project);
+            const visibleTech = project.tech.slice(0, 2);
+            const remainingTechCount = project.tech.length - 3;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.6 }}
+                className="p-6 rounded-xl bg-gray-100 dark:bg-gray-800 shadow-md hover:shadow-xl transition flex flex-col group cursor-pointer min-h-[250px]"
+                onClick={() => setSelectedProjectIndex(globalIndex)}
               >
-                View Project →
-              </a>
-            </motion.div>
-          ))}
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 flex-grow">
+                  {project.description.length > 90
+                    ? project.description.slice(0, 90) + "..."
+                    : project.description}
+                </p>
+                 {/* Tech stack badges with wrapping */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {visibleTech.map((t, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium flex-shrink-0 dark:text-primary dark:bg-primary/20"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                  {remainingTechCount > 0 && (
+                    <span className="text-xs px-3 py-1 rounded-full bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">
+                      +{remainingTechCount} more
+                    </span>
+                  )}
+                </div>
+                <a className="text-primary font-medium hover:underline mt-auto">
+                  View Project →
+                </a>
+              </motion.div>
+            );
+          })}
         </div>
         {/* Pagination Controls */}
         <div className="flex justify-center items-center gap-4 mt-10">
@@ -236,10 +367,13 @@ export default function Projects() {
       </div>
       {/* AnimatePresence for smooth close */}
       <AnimatePresence>
-        {selectedProject && (
+        {selectedProjectIndex !== null && (
           <Modal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
+            project={sortedProjects[selectedProjectIndex]}
+            onClose={() => setSelectedProjectIndex(null)}
+            projectIndex={selectedProjectIndex}
+            setProjectIndex={setSelectedProjectIndex}
+            totalProjects={sortedProjects.length}
           />
         )}
       </AnimatePresence>
@@ -247,7 +381,15 @@ export default function Projects() {
   );
 }
 
-function Modal({ project, onClose }) {
+function Modal({
+  project,
+  onClose,
+  projectIndex,
+  setProjectIndex,
+  totalProjects,
+}) {
+  const [currentImage, setCurrentImage] = useState(0);
+
   // Close modal when clicking outside content
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -255,11 +397,29 @@ function Modal({ project, onClose }) {
     }
   };
 
-  const [currentImage, setCurrentImage] = useState(0);
-
   useEffect(() => {
     setCurrentImage(0); // reset to first image when opening a new project
   }, [project]);
+
+  const nextProject = () => {
+    setProjectIndex((prev) => (prev + 1) % totalProjects);
+  };
+
+  const prevProject = () => {
+    setProjectIndex((prev) => (prev - 1 + totalProjects) % totalProjects);
+  };
+
+  const nextImage = () => {
+    setCurrentImage((prev) =>
+      prev === project.images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) =>
+      prev === 0 ? project.images.length - 1 : prev - 1
+    );
+  };
 
   return (
     <motion.div
@@ -270,7 +430,7 @@ function Modal({ project, onClose }) {
       exit={{ opacity: 0 }}
     >
       <motion.div
-        className="bg-white dark:bg-gray-900 rounded-lg max-w-2xl w-full p-6 relative overflow-y-auto max-h-[90vh]"
+        className="bg-white dark:bg-gray-900 rounded-lg max-w-5xl w-full relative overflow-y-auto max-h-[95vh] shadow-xl"
         initial={{ scale: 0.9, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -279,147 +439,132 @@ function Modal({ project, onClose }) {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 text-2xl"
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200 text-2xl z-20"
         >
           &times;
         </button>
 
-        {/* Title */}
-        <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-
-        {/* Description */}
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
-          {project.description}
-        </p>
-
-        {/* Tech Stack */}
-        {project.tech && (
-          <div className="mb-4">
-            <h3 className="font-semibold mb-2">Tech Used:</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.tech.map((t, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Images */}
-        {project.images && project.images.length > 0 && (
-          <div className="mb-4 relative flex flex-col items-center">
-            <motion.img
-              key={currentImage}
-              src={project.images[currentImage]}
-              alt={`${project.title} screenshot ${currentImage + 1}`}
-              className="mx-auto rounded-lg max-h-64 w-auto object-contain bg-gray-100"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
-            />
-
-            {/* Prev / Next buttons */}
-            {project.images.length > 1 && (
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+          {/* Left Column (Image Slider) */}
+          <div className="relative flex flex-col items-center">
+            {project.images && project.images.length > 0 && (
               <>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setCurrentImage((prev) =>
-                      prev === 0 ? project.images.length - 1 : prev - 1
-                    );
-                  }}
-                 className="absolute top-1/2 left-7 -translate-y-1/2 bg-black bg-opacity-50 h-12 px-4 text-white rounded-full hover:bg-opacity-70"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setCurrentImage((prev) =>
-                      prev === project.images.length - 1 ? 0 : prev + 1
-                    );
-                  }}
-                  className="absolute top-1/2 right-7 -translate-y-1/2 bg-black bg-opacity-50 h-12 px-4 text-white rounded-full hover:bg-opacity-70"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                    />
-                  </svg>
-                </button>
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentImage}
+                    src={project.images[currentImage]}
+                    alt={`${project.title} screenshot ${currentImage + 1}`}
+                    className="mx-auto rounded-lg max-h-96 w-auto object-contain bg-gray-100"
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </AnimatePresence>
+                {/* Prev / Next image buttons */}
+                {project.images.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevImage}
+                      className="absolute top-1/2 left-0 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition"
+                    >
+                      <ArrowLeft size={20} />
+                    </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute top-1/2 right-0 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition"
+                    >
+                      <ArrowRight size={20} />
+                    </button>
+                  </>
+                )}
+                {/* Dots */}
+                {project.images.length > 1 && (
+                  <div className="flex justify-center mt-2 gap-2">
+                    {project.images.map((_, i) => (
+                      <span
+                        key={i}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCurrentImage(i);
+                        }}
+                        className={`w-3 h-3 rounded-full cursor-pointer ${
+                          i === currentImage
+                            ? "bg-primary"
+                            : "bg-gray-400 dark:bg-gray-600"
+                        }`}
+                      ></span>
+                    ))}
+                  </div>
+                )}
               </>
             )}
+          </div>
 
-            {/* Dots */}
-            {project.images.length > 1 && (
-              <div className="flex justify-center mt-2 gap-2">
-                {project.images.map((_, i) => (
-                  <span
-                    key={i}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setCurrentImage(i);
-                    }}
-                    className={`w-3 h-3 rounded-full cursor-pointer ${
-                      i === currentImage ? "bg-primary" : "bg-gray-400"
-                    }`}
-                  ></span>
-                ))}
+          {/* Right Column (Content) */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              {project.description}
+            </p>
+            {/* Tech Stack */}
+            {project.tech && (
+              <div className="mb-4">
+                <h3 className="font-semibold mb-2">Tech Used:</h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             )}
+            {/* Buttons */}
+            <div className="flex gap-4 mt-4">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center gap-2"
+                >
+                  <Github size={18} /> GitHub
+                </a>
+              )}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition flex items-center gap-2"
+                >
+                  <ExternalLink size={18} /> Live Demo
+                </a>
+              )}
+            </div>
           </div>
-        )}
-
-        {/* Buttons */}
-        <div className="flex gap-4 mt-4">
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700"
-            >
-              GitHub
-            </a>
-          )}
-          {project.demo && (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark"
-            >
-              Live Demo
-            </a>
-          )}
         </div>
+
+   {/* Project Navigation Buttons (at the bottom) */}
+<div className="flex justify-center gap-4 px-6 py-4">
+  <button
+    onClick={prevProject}
+    className="px-4 py-2 border border-gray-800 dark:border-white text-gray-800 dark:text-white rounded hover:bg-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors duration-300 min-w-[170px]"
+  >
+    ← Previous Project
+  </button>
+  <button
+    onClick={nextProject}
+    className="px-4 py-2 border border-gray-800 dark:border-white text-gray-800 dark:text-white rounded hover:bg-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors duration-300 min-w-[170px]"
+  >
+    Next Project →
+  </button>
+</div>
       </motion.div>
     </motion.div>
   );
