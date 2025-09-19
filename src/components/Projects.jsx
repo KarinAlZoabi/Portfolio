@@ -184,45 +184,66 @@ const projects = [
     github: "https://github.com/danad1821/FYP",
     demo: "https://studentsrhuedu-my.sharepoint.com/personal/alzoabikm_students_rhu_edu_lb/_layouts/15/stream.aspx?id=%2Fpersonal%2Falzoabikm%5Fstudents%5Frhu%5Fedu%5Flb%2FDocuments%2FFYP%20DEMO%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUFvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1",
     images: [
-      "Images/homePic.jpg",
-      "Images/DiagnosisPic.jpg",
-      "Images/ArticlesPic.jpg",
-      "Images/ColorThemes.jpg",
-      "Images/HomePink.jpg",
+      "Images/ASDetect/homePic.jpg",
+      "Images/ASDetect/DiagnosisPic.jpg",
+      "Images/ASDetect/ArticlesPic.jpg",
+      "Images/ASDetect/ColorThemes.jpg",
+      "Images/ASDetect/HomePink.jpg",
     ],
     link: "#",
     date: "2025-04",
   },
-   {
-    title: "Project Two",
-    description:
-      "Another project description placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    tech: ["React", "Tailwind"],
-    github: "#",
-    demo: "#",
-    images: [],
-    link: "#",
-    date: "2025-02",
-  },
   {
-    title: "Project Three",
-    description: "Yet another cool project you worked on.",
-    tech: ["React", "Tailwind"],
-    github: "#",
-    demo: "#",
-    images: [],
+    title: "Curl",
+    description:
+      "Curl is a front-end website that was created in collaboration with graphic designers. It is a mock website for the coffee shop, Curl, located in Badaro, Lebanon. Key features of this website are quote of the day and the community page.",
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "Figma"],
+    github: "https://github.com/danad1821/Curl-Website",
+    demo: "https://drive.google.com/file/d/1H3mZ7IUefKEZ7V21XfDJWJKLa6wO6COz/view",
+    images: [
+      "Images/Curl/HeroSection.png",
+      "Images/Curl/About.png",
+      "Images/Curl/BestSelling.png",
+      "Images/Curl/Quote.png",
+      "Images/Curl/Events.png",
+      "Images/Curl/Menu.png",
+      "Images/Curl/Merch.png",
+      "Images/Curl/Community.png",
+      "Images/Curl/Reviews.png",
+    ],
     link: "#",
     date: "2024-12",
   },
   {
-    title: "Project Three",
-    description: "Yet another cool project you worked on.",
-    tech: ["React", "Tailwind"],
+    title: "Sparkle",
+    description:
+      "Sparkle is a website created for the Advanced Web Programming course. It is a full-stack e-commerce website for the imaginary hair products brand Sparkle. ",
+    tech: ["PHP", "HTML", "CSS", "PhpMyAdmin", "Bootstrap", "Xampp"],
+    github: "#",
+    demo: "https://drive.google.com/file/d/1rAu2WEcinEVLwJPbWzXOVrdTYhP1X-5k/view?usp=sharing",
+    images: ["Images/Sparkle/Hero.png", "Images/Sparkle/ProductsHome.png", "Images/Sparkle/HairTexture.png", "Images/Sparkle/Contact.jpg"],
+    link: "#",
+    date: "2024-04",
+  },
+  {
+    title: "DAFSA Management Web App",
+    description: "This web app was designed to enable users to create a Deterministic Acyclic Finite State Automaton (DAFSA) and customize its display. This is because the app includes features that change the colors of the diagram, alter the number of states, and minimize the DAFSA. This project was done for the theory of computation course.",
+    tech: ["D3.js", "JavaScript", "HTML", "CSS"],
+    github: "https://github.com/danad1821/DAFSA-App",
+    demo: "https://github.com/danad1821/DAFSA-App",
+    images: ["Images/DAFSA/Home.png"],
+    link: "#",
+    date: "2024-11",
+  },
+  {
+    title: "UniFlow",
+    description: "A ReactJs project created to help university students manage their projects and tasks.",
+    tech: ["React", "Firebase", "JavaScript", "HTML", "CSS"],
     github: "#",
     demo: "#",
-    images: [],
+    images: ["Images/UniFlow/Landing1.png", "Images/UniFlow/Landing2.png", "Images/UniFlow/Home.png", "Images/UniFlow//Calendar.png"],
     link: "#",
-    date: "2024-01",
+    date: "2024-11",
   },
 ];
 
@@ -303,6 +324,8 @@ export default function Projects() {
             const globalIndex = sortedProjects.indexOf(project);
             const visibleTech = project.tech.slice(0, 2);
             const remainingTechCount = project.tech.length - 3;
+
+          
             return (
               <motion.div
                 key={index}
@@ -321,7 +344,7 @@ export default function Projects() {
                     ? project.description.slice(0, 90) + "..."
                     : project.description}
                 </p>
-                 {/* Tech stack badges with wrapping */}
+                {/* Tech stack badges with wrapping */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {visibleTech.map((t, i) => (
                     <span
@@ -430,11 +453,12 @@ function Modal({
       exit={{ opacity: 0 }}
     >
       <motion.div
-        className="bg-white dark:bg-gray-900 rounded-lg max-w-5xl w-full relative overflow-y-auto max-h-[95vh] shadow-xl"
+      
+        className="bg-white dark:bg-gray-900 rounded-lg max-w-5xl w-full relative overflow-y-auto max-h-[95vh] shadow-xl "
         initial={{ scale: 0.9, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
-        transition={{ duration: 0.25 }}
+        transition={{ duration: 0.25 , ease: "easeInOut"}}
       >
         {/* Close Button */}
         <button
@@ -550,21 +574,21 @@ function Modal({
           </div>
         </div>
 
-   {/* Project Navigation Buttons (at the bottom) */}
-<div className="flex justify-center gap-4 px-6 py-4">
-  <button
-    onClick={prevProject}
-    className="px-4 py-2 border border-gray-800 dark:border-white text-gray-800 dark:text-white rounded hover:bg-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors duration-300 min-w-[170px]"
-  >
-    ← Previous Project
-  </button>
-  <button
-    onClick={nextProject}
-    className="px-4 py-2 border border-gray-800 dark:border-white text-gray-800 dark:text-white rounded hover:bg-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors duration-300 min-w-[170px]"
-  >
-    Next Project →
-  </button>
-</div>
+        {/* Project Navigation Buttons (at the bottom) */}
+        <div className="flex justify-center gap-4 px-6 py-4">
+          <button
+            onClick={prevProject}
+            className="px-4 py-2 border border-gray-800 dark:border-white text-gray-800 dark:text-white rounded hover:bg-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors duration-300 min-w-[170px]"
+          >
+            ← Previous Project
+          </button>
+          <button
+            onClick={nextProject}
+            className="px-4 py-2 border border-gray-800 dark:border-white text-gray-800 dark:text-white rounded hover:bg-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors duration-300 min-w-[170px]"
+          >
+            Next Project →
+          </button>
+        </div>
       </motion.div>
     </motion.div>
   );
