@@ -1,167 +1,3 @@
-// // src/components/Projects.jsx
-// import { motion } from "framer-motion";
-
-// const projects = [
-//   {
-//     title: "Project One",
-//     description: "A short description of your project goes here.",
-//     image: "https://via.placeholder.com/600x400", // Replace with your screenshot
-//     link: "#",
-//   },
-//   {
-//     title: "Project Two",
-//     description: "Another project description placeholder.",
-//     image: "https://via.placeholder.com/600x400",
-//     link: "#",
-//   },
-//   {
-//     title: "Project Three",
-//     description: "Yet another cool project you worked on.",
-//     image: "https://via.placeholder.com/600x400",
-//     link: "#",
-//   },
-// ];
-
-// export default function Projects() {
-//   return (
-//     <section
-//       id="projects"
-//       className="py-20 px-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-//     >
-//       <div className="max-w-6xl mx-auto text-center">
-//         {/* Section Title */}
-//         <motion.h2
-//           initial={{ opacity: 0, y: -20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.6 }}
-//           className="text-4xl font-bold mb-12"
-//         >
-//           Projects
-//         </motion.h2>
-
-//         {/* Projects Grid */}
-//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-//           {projects.map((project, index) => (
-//             <motion.div
-//               key={index}
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               viewport={{ once: true }}
-//               transition={{ delay: index * 0.2, duration: 0.6 }}
-//               className="rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-md hover:shadow-xl transition"
-//             >
-//               {/* Project Image */}
-//               <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-48 object-cover"
-//               />
-
-//               {/* Content */}
-//               <div className="p-6 text-left">
-//                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-//                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-//                   {project.description}
-//                 </p>
-//                 <a
-//                   href={project.link}
-//                   className="text-primary font-medium hover:underline"
-//                 >
-//                   View Project →
-//                 </a>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-//no images
-
-// // src/components/Projects.jsx
-// import { motion } from "framer-motion";
-
-// const projects = [
-//   {
-//     title: "Project One",
-//     description: "A short description of your project goes here.",
-//     image: "https://via.placeholder.com/600x400", // Replace with your screenshot
-//     link: "#",
-//   },
-//   {
-//     title: "Project Two",
-//     description: "Another project description placeholder.",
-//     image: "https://via.placeholder.com/600x400",
-//     link: "#",
-//   },
-//   {
-//     title: "Project Three",
-//     description: "Yet another cool project you worked on.",
-//     image: "https://via.placeholder.com/600x400",
-//     link: "#",
-//   },
-// ];
-
-// export default function Projects() {
-//   return (
-//     <section
-//       id="projects"
-//       className="py-20 px-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-//     >
-//       <div className="max-w-6xl mx-auto text-center">
-//         {/* Section Title */}
-//         <motion.h2
-//           initial={{ opacity: 0, y: -20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.6 }}
-//           className="text-4xl font-bold mb-12"
-//         >
-//           Projects
-//         </motion.h2>
-
-//         {/* Projects Grid */}
-//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-//           {projects.map((project, index) => (
-//             <motion.div
-//               key={index}
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               viewport={{ once: true }}
-//               transition={{ delay: index * 0.2, duration: 0.6 }}
-//               className="rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-md hover:shadow-xl transition"
-//             >
-//               {/* Project Image */}
-//               <img
-//                 src={project.image}
-//                 alt={project.title}
-//                 className="w-full h-48 object-cover"
-//               />
-
-//               {/* Content */}
-//               <div className="p-6 text-left">
-//                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-//                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-//                   {project.description}
-//                 </p>
-//                 <a
-//                   href={project.link}
-//                   className="text-primary font-medium hover:underline"
-//                 >
-//                   View Project →
-//                 </a>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 //no images
 // src/components/Projects.jsx
 import { useState, useEffect } from "react";
@@ -221,13 +57,19 @@ const projects = [
     tech: ["PHP", "HTML", "CSS", "PhpMyAdmin", "Bootstrap", "Xampp"],
     github: "#",
     demo: "https://drive.google.com/file/d/1rAu2WEcinEVLwJPbWzXOVrdTYhP1X-5k/view?usp=sharing",
-    images: ["Images/Sparkle/Hero.png", "Images/Sparkle/ProductsHome.png", "Images/Sparkle/HairTexture.png", "Images/Sparkle/Contact.jpg"],
+    images: [
+      "Images/Sparkle/Hero.png",
+      "Images/Sparkle/ProductsHome.png",
+      "Images/Sparkle/HairTexture.png",
+      "Images/Sparkle/Contact.jpg",
+    ],
     link: "#",
     date: "2024-04",
   },
   {
     title: "DAFSA Management Web App",
-    description: "This web app was designed to enable users to create a Deterministic Acyclic Finite State Automaton (DAFSA) and customize its display. This is because the app includes features that change the colors of the diagram, alter the number of states, and minimize the DAFSA. This project was done for the theory of computation course.",
+    description:
+      "This web app was designed to enable users to create a Deterministic Acyclic Finite State Automaton (DAFSA) and customize its display. This is because the app includes features that change the colors of the diagram, alter the number of states, and minimize the DAFSA. This project was done for the theory of computation course.",
     tech: ["D3.js", "JavaScript", "HTML", "CSS"],
     github: "https://github.com/danad1821/DAFSA-App",
     demo: "https://github.com/danad1821/DAFSA-App",
@@ -237,13 +79,48 @@ const projects = [
   },
   {
     title: "UniFlow",
-    description: "A ReactJs project created to help university students manage their projects and tasks.",
+    description:
+      "A ReactJs project created to help university students manage their projects and tasks.",
     tech: ["React", "Firebase", "JavaScript", "HTML", "CSS"],
     github: "#",
     demo: "#",
-    images: ["Images/UniFlow/Landing1.png", "Images/UniFlow/Landing2.png", "Images/UniFlow/Home.png", "Images/UniFlow//Calendar.png"],
+    images: [
+      "Images/UniFlow/Landing1.png",
+      "Images/UniFlow/Landing2.png",
+      "Images/UniFlow/Home.png",
+      "Images/UniFlow//Calendar.png",
+    ],
     link: "#",
     date: "2024-11",
+  },
+  {
+    title: "Device Manager",
+    description:
+      "A full-stack website created as part of my software developer internship at Vanrise. This website allows users to manage clients, phone numbers, phone number reservations and view reports about reservation statistics.",
+    tech: [
+      "AngularJs",
+      "SQL",
+      "SQL Server",
+      "HTML",
+      "CSS",
+      "ADO.Net",
+      "Bootstrap",
+      "ASP.NET MVC"
+    ],
+    github:
+      "https://github.com/KarinAlZoabi/InternshipProject-DevicesManager/tree/main",
+    demo: "#",
+    images: [
+      "Images/Internship/Login.png",
+      "Images/Internship/Devices.png",
+      "Images/Internship/Clients.png",
+      "Images/Internship/PhoneNumbers.png",
+      "Images/Internship/PhoneNumberReservations.png",
+      "Images/Internship/ReportClients.png",
+      "Images/Internship/ReportPhone.png",
+    ],
+    link: "#",
+    date: "2025-08",
   },
 ];
 
@@ -325,7 +202,6 @@ export default function Projects() {
             const visibleTech = project.tech.slice(0, 2);
             const remainingTechCount = project.tech.length - 3;
 
-          
             return (
               <motion.div
                 key={index}
@@ -453,12 +329,11 @@ function Modal({
       exit={{ opacity: 0 }}
     >
       <motion.div
-      
         className="bg-white dark:bg-gray-900 rounded-lg max-w-5xl w-full relative overflow-y-auto max-h-[95vh] shadow-xl "
         initial={{ scale: 0.9, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
-        transition={{ duration: 0.25 , ease: "easeInOut"}}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
       >
         {/* Close Button */}
         <button
@@ -550,27 +425,45 @@ function Modal({
             )}
             {/* Buttons */}
             <div className="flex gap-4 mt-4">
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center gap-2"
-                >
-                  <Github size={18} /> GitHub
-                </a>
-              )}
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition flex items-center gap-2"
-                >
-                  <ExternalLink size={18} /> Live Demo
-                </a>
-              )}
-            </div>
+  {/* GitHub Button */}
+  {project.github && project.github !== "#" ? (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center gap-2"
+    >
+      <Github size={18} /> GitHub
+    </a>
+  ) : (
+    <button
+      disabled
+      className="px-4 py-2 bg-gray-400 text-white rounded cursor-not-allowed flex items-center gap-2"
+    >
+      <Github size={18} /> GitHub
+    </button>
+  )}
+
+  {/* Demo Button */}
+  {project.demo && project.demo !== "#" ? (
+    <a
+      href={project.demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition flex items-center gap-2"
+    >
+      <ExternalLink size={18} /> Live Demo
+    </a>
+  ) : (
+    <button
+      disabled
+      className="px-4 py-2 bg-gray-400 text-white rounded cursor-not-allowed flex items-center gap-2"
+    >
+      <ExternalLink size={18} /> Live Demo
+    </button>
+  )}
+</div>
+
           </div>
         </div>
 
