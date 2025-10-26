@@ -53,7 +53,7 @@ const projects = [
   {
     title: "Sparkle",
     description:
-      "Sparkle is a website created for the Advanced Web Programming course. It is a full-stack e-commerce website for the imaginary hair products brand Sparkle. ",
+      "Sparkle is a a mock website for a cosmetics brand. It is a full-stack e-commerce website for the imaginary hair products brand Sparkle. ",
     tech: ["PHP", "HTML", "CSS", "PhpMyAdmin", "Bootstrap", "Xampp"],
     github: "#",
     demo: "https://drive.google.com/file/d/1rAu2WEcinEVLwJPbWzXOVrdTYhP1X-5k/view?usp=sharing",

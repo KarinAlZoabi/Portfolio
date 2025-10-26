@@ -6,7 +6,7 @@ const FinisherBackground = () => {
   useEffect(() => {
     if (window.FinisherHeader && bgRef.current) {
       new window.FinisherHeader({
-        // This targets your custom div
+        // This targets custom div
         "count": 10,
         "size": {
           "min": 1300,
